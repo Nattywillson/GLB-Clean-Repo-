@@ -1,0 +1,16 @@
+<svg width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="100" fill="#000000"/>
+  <g transform="translate(20, 25)">
+    <!-- Hands holding people -->
+    <path d="M10 30 Q15 25 20 30 L25 35 Q30 40 35 35 L40 30 Q45 25 50 30 L50 45 Q45 50 40 45 L35 50 Q30 55 25 50 L20 45 Q15 50 10 45 Z" fill="#D4AF37"/>
+    <!-- People figures -->
+    <circle cx="20" cy="20" r="3" fill="#D4AF37"/>
+    <circle cx="30" cy="20" r="3" fill="#D4AF37"/>
+    <circle cx="40" cy="20" r="3" fill="#D4AF37"/>
+    <rect x="18" y="23" width="4" height="8" fill="#D4AF37"/>
+    <rect x="28" y="23" width="4" height="8" fill="#D4AF37"/>
+    <rect x="38" y="23" width="4" height="8" fill="#D4AF37"/>
+  </g>
+  <text x="80" y="35" font-family="serif" font-size="16" fill="#D4AF37" font-weight="300">GLOBAL WOMEN</text>
+  <text x="80" y="55" font-family="serif" font-size="16" fill="#D4AF37" font-weight="300">RISING</text>
+</svg>
