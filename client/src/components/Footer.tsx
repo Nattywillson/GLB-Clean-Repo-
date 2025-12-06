@@ -128,7 +128,7 @@ export default function Footer() {
 
         <div className="border-t border-background/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex gap-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-background" data-testid="link-social-facebook">
+            <a href="https://www.facebook.com/globalwomenrising" target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-background" data-testid="link-social-facebook">
               <Facebook className="w-5 h-5" />
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-background/80 hover:text-background" data-testid="link-social-twitter">
