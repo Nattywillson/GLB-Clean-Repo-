@@ -12,6 +12,7 @@ import Events from "@/pages/Events";
 import Stories from "@/pages/Stories";
 import Contact from "@/pages/Contact";
 import Privacy from "@/pages/Privacy";
+import Careers from "@/pages/Careers";
 import Admin from "@/pages/Admin";
 import NotFound from "@/pages/not-found";
 
@@ -28,6 +29,7 @@ function Router() {
       <Route path="/stories/:slug" component={Stories} />
       <Route path="/contact" component={Contact} />
       <Route path="/privacy" component={Privacy} />
+      <Route path="/careers" component={Careers} />
       <Route path="/admin" component={Admin} />
       <Route path="/terms" component={Contact} />
       <Route component={NotFound} />
