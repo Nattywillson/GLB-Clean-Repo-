@@ -23,6 +23,7 @@ export default function Navigation() {
     { href: "/impact", label: "Impact" },
     { href: "/events", label: "Events" },
     { href: "/stories", label: "Stories" },
+    { href: "/careers", label: "Careers" },
   ];
 
   return (
