@@ -4,11 +4,18 @@ import './JobApplication.css';
 
 // Job roles array - easy to modify
 const JOB_ROLES = [
+  'Women\'s Crisis Support Counselor',
+  'Community Outreach Coordinator',
+  'Trauma-Informed Care Specialist',
   'Data Entry Clerk',
   'Finance Manager', 
   'Virtual Event Coordinator',
   'Personal Assistant',
-  'Chat Support Assistant'
+  'Chat Support Assistant',
+  'Volunteer Crisis Hotline Operator',
+  'Women\'s Empowerment Workshop Facilitator',
+  'Volunteer Mentor',
+  'Student Intern - Social Impact'
 ];
 
 interface JobApplicationProps {

@@ -12,7 +12,7 @@ const jobPositions = [
     department: "Support Services",
     type: "Full-time",
     location: "Remote/Hybrid",
-    description: "Provide emotional support and crisis intervention for women experiencing trauma, domestic violence, or mental health challenges.",
+    description: "💔 Be the voice of hope for women in their darkest moments. Provide emotional support and crisis intervention for women experiencing trauma, domestic violence, or mental health challenges.",
     requirements: ["Psychology/Social Work degree", "Crisis intervention training", "Empathy and active listening skills"],
     careerPath: "Counselor → Senior Counselor → Program Manager → Director of Support Services"
   },
@@ -22,7 +22,7 @@ const jobPositions = [
     department: "Outreach",
     type: "Full-time",
     location: "Field Work",
-    description: "Connect with vulnerable women in communities, organize support groups, and facilitate access to resources.",
+    description: "🤝 Reach out to vulnerable women in communities, organize support groups, and be the bridge that connects them to life-changing resources.",
     requirements: ["Community development experience", "Cultural sensitivity", "Strong communication skills"],
     careerPath: "Coordinator → Senior Coordinator → Regional Manager → VP of Outreach"
   },
@@ -32,43 +32,104 @@ const jobPositions = [
     department: "Healthcare",
     type: "Full-time",
     location: "On-site",
-    description: "Develop and implement trauma-informed care programs for women survivors of abuse and violence.",
+    description: "🩺 Heal hearts and minds by developing trauma-informed care programs for women survivors of abuse and violence. Your expertise saves lives.",
     requirements: ["Healthcare background", "Trauma-informed care certification", "Program development skills"],
     careerPath: "Specialist → Lead Specialist → Program Director → Chief Medical Officer"
   },
   {
     id: 4,
+    title: "Data Entry Clerk",
+    department: "Administration",
+    type: "Part-time",
+    location: "Remote",
+    description: "📊 Support our mission from behind the scenes by maintaining accurate records that help us track our impact on women's lives worldwide.",
+    requirements: ["Attention to detail", "Computer proficiency", "Data accuracy skills"],
+    careerPath: "Clerk → Senior Clerk → Data Manager → Operations Director"
+  },
+  {
+    id: 5,
+    title: "Finance Manager",
+    department: "Finance",
+    type: "Full-time",
+    location: "Hybrid",
+    description: "💰 Ensure every dollar donated goes toward empowering women. Manage finances that directly fund life-changing programs and support services.",
+    requirements: ["Finance/Accounting degree", "Budget management experience", "Financial analysis skills"],
+    careerPath: "Manager → Senior Manager → Finance Director → Chief Financial Officer"
+  },
+  {
+    id: 6,
+    title: "Virtual Event Coordinator",
+    department: "Events",
+    type: "Part-time",
+    location: "Remote",
+    description: "🎉 Create inspiring virtual experiences that bring women together, share stories of triumph, and build a global community of support.",
+    requirements: ["Event planning experience", "Virtual platform knowledge", "Creative thinking"],
+    careerPath: "Coordinator → Senior Coordinator → Events Manager → Director of Events"
+  },
+  {
+    id: 7,
+    title: "Personal Assistant",
+    department: "Administration",
+    type: "Part-time",
+    location: "Remote",
+    description: "📝 Be the organizational backbone that keeps our leadership focused on changing women's lives. Your support enables greater impact.",
+    requirements: ["Administrative experience", "Excellent communication", "Time management skills"],
+    careerPath: "Assistant → Senior Assistant → Executive Assistant → Operations Manager"
+  },
+  {
+    id: 8,
+    title: "Chat Support Assistant",
+    department: "Support Services",
+    type: "Part-time",
+    location: "Remote",
+    description: "💬 Be the first point of contact for women seeking help. Your compassionate responses can be the first step in someone's healing journey.",
+    requirements: ["Customer service experience", "Empathetic communication", "Multi-tasking abilities"],
+    careerPath: "Assistant → Senior Assistant → Support Manager → Director of Support"
+  },
+  {
+    id: 9,
     title: "Volunteer Crisis Hotline Operator",
     department: "Volunteer",
     type: "Volunteer",
     location: "Remote",
-    description: "Answer crisis calls from women in distress, provide immediate emotional support, and connect them with appropriate resources.",
+    description: "📞 Answer the call when someone needs you most. Provide immediate emotional support to women in crisis and connect them with life-saving resources.",
     requirements: ["Compassionate nature", "Good listening skills", "Availability for training"],
     careerPath: "Volunteer → Team Lead → Volunteer Coordinator → Program Manager"
   },
   {
-    id: 5,
+    id: 10,
     title: "Women's Empowerment Workshop Facilitator",
     department: "Programs",
     type: "Part-time",
     location: "Various Locations",
-    description: "Lead workshops on self-esteem, financial literacy, and life skills for women recovering from trauma.",
+    description: "✨ Lead transformational workshops on self-esteem, financial literacy, and life skills for women rebuilding their lives after trauma.",
     requirements: ["Workshop facilitation experience", "Women's issues knowledge", "Public speaking skills"],
     careerPath: "Facilitator → Senior Facilitator → Program Manager → Director of Programs"
   },
   {
-    id: 6,
+    id: 11,
     title: "Volunteer Mentor",
     department: "Volunteer",
     type: "Volunteer",
     location: "Flexible",
-    description: "Provide one-on-one mentoring support to women rebuilding their lives after experiencing trauma or abuse.",
+    description: "🌟 Be the guiding light in someone's journey to healing. Provide one-on-one mentoring support to women rebuilding their lives after trauma or abuse.",
     requirements: ["Life experience", "Mentoring skills", "Commitment to helping others"],
     careerPath: "Volunteer Mentor → Senior Mentor → Mentor Coordinator → Program Director"
+  },
+  {
+    id: 12,
+    title: "Student Intern - Social Impact",
+    department: "Student Programs",
+    type: "Internship",
+    location: "Remote/Hybrid",
+    description: "🎓 Start your career by making a difference. Learn while contributing to programs that empower women globally. Perfect for students passionate about social change.",
+    requirements: ["Currently enrolled student", "Passion for women's rights", "Eagerness to learn"],
+    careerPath: "Intern → Junior Associate → Program Coordinator → Program Manager",
+    isStudent: true
   }
 ];
 
-const departments = ["All", "Support Services", "Outreach", "Healthcare", "Programs", "Volunteer"];
+const departments = ["All", "Support Services", "Outreach", "Healthcare", "Administration", "Finance", "Events", "Programs", "Volunteer", "Student Programs"];
 
 const Careers: React.FC = () => {
   const [selectedDepartment, setSelectedDepartment] = useState("All");
@@ -131,8 +192,10 @@ const Careers: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-xl max-w-3xl mx-auto leading-relaxed"
             >
-              Help us empower women worldwide. Make a difference in the lives of women facing trauma, 
-              crisis, and challenges. Your compassion can change lives.
+              💝 Every role here touches a life. Every application could be the start of someone's healing journey. 
+              Join us in creating a world where every woman feels valued, supported, and empowered to rise. 
+              <br /><br />
+              🌟 <em>"Your compassion today becomes someone's hope tomorrow."</em>
             </motion.p>
           </div>
         </div>
@@ -200,6 +263,14 @@ const Careers: React.FC = () => {
                             {job.type}
                           </span>
                         </div>
+                        {job.isStudent && (
+                          <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-3">
+                            <p className="text-sm text-blue-700 font-medium">
+                              ⚠️ Student Application Notice: Please use your personal email address only. 
+                              Do not use your school/university email for applications.
+                            </p>
+                          </div>
+                        )}
                       </div>
                       {job.type === 'Volunteer' && (
                         <Heart className="w-6 h-6 text-pink-500 flex-shrink-0" />
