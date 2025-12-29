@@ -11,8 +11,12 @@ const JOB_ROLES = [
   'Chat Support Assistant'
 ];
 
-const JobApplication = () => {
-  const [selectedRole, setSelectedRole] = useState('');
+interface JobApplicationProps {
+  selectedPosition?: string;
+}
+
+const JobApplication: React.FC<JobApplicationProps> = ({ selectedPosition }) => {
+  const [selectedRole, setSelectedRole] = useState(selectedPosition || '');
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
