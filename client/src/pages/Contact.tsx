@@ -150,11 +150,27 @@ export default function Contact() {
                       <MapPin className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1">Headquarters</h3>
+                      <h3 className="font-semibold mb-1">US Office</h3>
                       <p className="text-muted-foreground">
-                        123 Philanthropy Avenue<br />
-                        New York, NY 10001<br />
+                        18 W Lake Ave A<br />
+                        Watsonville, CA 95076<br />
                         United States
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6">
+                  <div className="flex gap-4">
+                    <div className="w-12 h-12 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold mb-1">Canada Office</h3>
+                      <p className="text-muted-foreground">
+                        1920 Yonge St bureau 302<br />
+                        Toronto, ON M4S 3E2<br />
+                        Canada
                       </p>
                     </div>
                   </div>

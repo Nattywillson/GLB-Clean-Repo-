@@ -82,7 +82,7 @@ export default function Footer() {
             <h3 className="text-lg font-serif font-medium mb-4">Get Involved</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/get-involved">
+                <Link href="/careers?filter=Volunteer">
                   <span className="text-sm text-background/80 hover:text-background transition-colors" data-testid="link-footer-volunteer">
                     Volunteer
                   </span>

@@ -136,6 +136,15 @@ const Careers: React.FC = () => {
   const [selectedJob, setSelectedJob] = useState<any>(null);
   const [showApplication, setShowApplication] = useState(false);
 
+  // Check URL for filter parameter
+  React.useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const filterParam = urlParams.get('filter');
+    if (filterParam && departments.includes(filterParam)) {
+      setSelectedDepartment(filterParam);
+    }
+  }, []);
+
   const filteredJobs = selectedDepartment === "All" 
     ? jobPositions 
     : jobPositions.filter(job => job.department === selectedDepartment);
