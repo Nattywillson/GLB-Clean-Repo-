@@ -64,6 +64,11 @@ export default function Navigation() {
           </nav>
 
           <div className="hidden lg:flex items-center gap-4">
+            <Link href="/contact">
+              <Button variant="outline" data-testid="button-contact">
+                Contact
+              </Button>
+            </Link>
             <Link href="/get-involved">
               <Button variant="default" data-testid="button-get-involved">
                 Get Involved
@@ -105,6 +110,11 @@ export default function Navigation() {
                 </span>
               </Link>
             ))}
+            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+              <Button variant="outline" className="w-full" data-testid="button-mobile-contact">
+                Contact
+              </Button>
+            </Link>
             <Link href="/get-involved" onClick={() => setIsMobileMenuOpen(false)}>
               <Button className="w-full" data-testid="button-mobile-get-involved">
                 Get Involved

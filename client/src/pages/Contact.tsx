@@ -126,7 +126,7 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold mb-1">Email</h3>
                       <p className="text-muted-foreground">info@globalwomenrising.org</p>
-                      <p className="text-muted-foreground">press@globalwomenrising.org</p>
+                      <p className="text-muted-foreground">hr@globalwomenrising.org</p>
                     </div>
                   </div>
                 </Card>
