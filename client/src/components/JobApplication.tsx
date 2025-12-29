@@ -36,11 +36,46 @@ const JobApplication: React.FC<JobApplicationProps> = ({ selectedPosition }) => 
   const validateForm = () => {
     const newErrors = {};
     if (!formData.fullName.trim()) newErrors.fullName = 'Full name is required';
-    if (!formData.email.trim()) newErrors.email = 'Email is required';
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (isStudentPosition(selectedRole) && !isPersonalEmail(formData.email)) {
+      newErrors.email = 'Student positions require personal email (gmail, yahoo, outlook, icloud, etc.). Educational emails (.edu, .k12, etc.) are not accepted.';
+    }
     if (!selectedRole) newErrors.role = 'Please select a position';
     
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
+  };
+
+  // Check if position is student-related
+  const isStudentPosition = (role) => {
+    return role && role.toLowerCase().includes('student');
+  };
+
+  // Check if email is personal (not educational)
+  const isPersonalEmail = (email) => {
+    const educationalDomains = [
+      '.edu', '.k12', '.ac.', '.university', '.college', '.school',
+      'student.', 'alumni.', '.edu.', '.ac.uk', '.ac.ca', '.ac.au'
+    ];
+    
+    const personalDomains = [
+      'gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com', 'icloud.com',
+      'aol.com', 'protonmail.com', 'zoho.com', 'mail.com', 'yandex.com'
+    ];
+    
+    const emailLower = email.toLowerCase();
+    
+    // Check if it's a known personal domain
+    const isPersonal = personalDomains.some(domain => emailLower.endsWith(domain));
+    if (isPersonal) return true;
+    
+    // Check if it contains educational indicators
+    const isEducational = educationalDomains.some(domain => emailLower.includes(domain));
+    if (isEducational) return false;
+    
+    // If not clearly educational, allow it (benefit of doubt for other personal domains)
+    return true;
   };
 
   // Handle form submission
@@ -195,8 +230,14 @@ Message: ${formData.message}`;
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
                     className={errors.email ? 'error' : ''}
+                    placeholder={isStudentPosition(selectedRole) ? 'Use personal email (gmail, yahoo, outlook, etc.)' : 'Enter your email address'}
                   />
                   {errors.email && <span className="job-application__error">{errors.email}</span>}
+                  {isStudentPosition(selectedRole) && (
+                    <div className="job-application__email-notice">
+                      <p>⚠️ Educational emails (.edu, .k12, student emails) will be automatically rejected. Please use a personal email address.</p>
+                    </div>
+                  )}
                 </div>
 
                 <div className="job-application__form-group">

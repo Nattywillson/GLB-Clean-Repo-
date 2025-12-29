@@ -376,3 +376,17 @@
     width: 100%;
   }
 }
+.job-application__email-notice {
+  margin-top: 8px;
+  padding: 12px;
+  background: #fef3cd;
+  border: 1px solid #fbbf24;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: #92400e;
+}
+
+.job-application__email-notice p {
+  margin: 0;
+  font-weight: 500;
+}
