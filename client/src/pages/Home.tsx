@@ -87,7 +87,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen page-transition">
       <Navigation />
       
       <Hero
@@ -260,7 +260,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {programs.map((program, index) => (
-              <div key={program.title} className="animate-on-scroll" style={{animationDelay: `${index * 0.2}s`}}>
+              <div key={program.title} className="fade-in-up hover-lift glass-card" style={{animationDelay: `${index * 0.2}s`}}>
                 <ProgramCard {...program} />
               </div>
             ))}
@@ -277,7 +277,7 @@ export default function Home() {
               Upcoming Events
             </h2>
             <Link href="/events">
-              <Button variant="ghost" data-testid="button-view-all-events">
+              <Button variant="ghost" className="ripple-button hover-glow" data-testid="button-view-all-events">
                 View All →
               </Button>
             </Link>
@@ -309,7 +309,7 @@ export default function Home() {
               Latest Stories
             </h2>
             <Link href="/stories">
-              <Button variant="ghost" data-testid="button-view-all-stories">
+              <Button variant="ghost" className="ripple-button hover-glow" data-testid="button-view-all-stories">
                 View All →
               </Button>
             </Link>

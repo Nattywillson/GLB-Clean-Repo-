@@ -4,6 +4,10 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import TawkToChat from "@/components/TawkToChat";
+import ScrollProgress from "@/components/ScrollProgress";
+import FloatingActionButton from "@/components/FloatingActionButton";
+import { useScrollAnimations } from "@/hooks/useScrollAnimations";
+import "@/styles/enhanced-ux.css";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Programs from "@/pages/Programs";
@@ -39,11 +43,15 @@ function Router() {
 }
 
 function App() {
+  useScrollAnimations();
+  
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
+        <ScrollProgress />
         <Toaster />
         <TawkToChat />
+        <FloatingActionButton />
         <Router />
       </TooltipProvider>
     </QueryClientProvider>
