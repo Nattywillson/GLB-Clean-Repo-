@@ -42,7 +42,7 @@ const jobPositions = [
     department: "Administration",
     type: "Part-time",
     location: "Remote",
-    description: "📊 Support our mission from behind the scenes by maintaining accurate records that help us track our impact on women's lives worldwide.",
+    description: " Support our mission from behind the scenes by maintaining accurate records that help us track our impact on women's lives worldwide.",
     requirements: ["Attention to detail", "Computer proficiency", "Data accuracy skills"],
     careerPath: "Clerk → Senior Clerk → Data Manager → Operations Director"
   },
@@ -52,7 +52,7 @@ const jobPositions = [
     department: "Finance",
     type: "Full-time",
     location: "Hybrid",
-    description: "💰 Ensure every dollar donated goes toward empowering women. Manage finances that directly fund life-changing programs and support services.",
+    description: " Ensure every dollar donated goes toward empowering women. Manage finances that directly fund life-changing programs and support services.",
     requirements: ["Finance/Accounting degree", "Budget management experience", "Financial analysis skills"],
     careerPath: "Manager → Senior Manager → Finance Director → Chief Financial Officer"
   },
@@ -62,7 +62,7 @@ const jobPositions = [
     department: "Events",
     type: "Part-time",
     location: "Remote",
-    description: "🎉 Create inspiring virtual experiences that bring women together, share stories of triumph, and build a global community of support.",
+    description: " Create inspiring virtual experiences that bring women together, share stories of triumph, and build a global community of support.",
     requirements: ["Event planning experience", "Virtual platform knowledge", "Creative thinking"],
     careerPath: "Coordinator → Senior Coordinator → Events Manager → Director of Events"
   },
@@ -72,7 +72,7 @@ const jobPositions = [
     department: "Administration",
     type: "Part-time",
     location: "Remote",
-    description: "📝 Be the organizational backbone that keeps our leadership focused on changing women's lives. Your support enables greater impact.",
+    description: " Be the organizational backbone that keeps our leadership focused on changing women's lives. Your support enables greater impact.",
     requirements: ["Administrative experience", "Excellent communication", "Time management skills"],
     careerPath: "Assistant → Senior Assistant → Executive Assistant → Operations Manager"
   },
@@ -102,7 +102,7 @@ const jobPositions = [
     department: "Programs",
     type: "Part-time",
     location: "Various Locations",
-    description: "✨ Lead transformational workshops on self-esteem, financial literacy, and life skills for women rebuilding their lives after trauma.",
+    description: " Lead transformational workshops on self-esteem, financial literacy, and life skills for women rebuilding their lives after trauma.",
     requirements: ["Workshop facilitation experience", "Women's issues knowledge", "Public speaking skills"],
     careerPath: "Facilitator → Senior Facilitator → Program Manager → Director of Programs"
   },
@@ -112,7 +112,7 @@ const jobPositions = [
     department: "Volunteer",
     type: "Volunteer",
     location: "Flexible",
-    description: "🌟 Be the guiding light in someone's journey to healing. Provide one-on-one mentoring support to women rebuilding their lives after trauma or abuse.",
+    description: " Be the guiding light in someone's journey to healing. Provide one-on-one mentoring support to women rebuilding their lives after trauma or abuse.",
     requirements: ["Life experience", "Mentoring skills", "Commitment to helping others"],
     careerPath: "Volunteer Mentor → Senior Mentor → Mentor Coordinator → Program Director"
   },
@@ -201,10 +201,10 @@ const Careers: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-xl max-w-3xl mx-auto leading-relaxed"
             >
-              💝 Every role here touches a life. Every application could be the start of someone's healing journey. 
+               Every role here touches a life. Every application could be the start of someone's healing journey. 
               Join us in creating a world where every woman feels valued, supported, and empowered to rise. 
               <br /><br />
-              🌟 <em>"Your compassion today becomes someone's hope tomorrow."</em>
+               <em>"Your compassion today becomes someone's hope tomorrow."</em>
             </motion.p>
           </div>
         </div>
