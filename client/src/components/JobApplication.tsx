@@ -312,7 +312,7 @@ Message: ${formData.message}`;
                     whileHover="hover"
                     whileTap="tap"
                   >
-                    📧 Email HR Team
+                    📧 Click Here to Email HR for Application Submission
                   </motion.a>
                 </div>
               </motion.div>
