@@ -7,6 +7,7 @@ import TawkToChat from "@/components/TawkToChat";
 import ScrollProgress from "@/components/ScrollProgress";
 import FloatingActionButton from "@/components/FloatingActionButton";
 import { useScrollAnimations } from "@/hooks/useScrollAnimations";
+import { useCanonicalUrl } from "@/hooks/useCanonicalUrl";
 import "@/styles/enhanced-ux.css";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
@@ -44,6 +45,7 @@ function Router() {
 
 function App() {
   useScrollAnimations();
+  useCanonicalUrl();
   
   return (
     <QueryClientProvider client={queryClient}>
