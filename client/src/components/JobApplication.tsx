@@ -27,6 +27,7 @@ const JobApplication: React.FC<JobApplicationProps> = ({ selectedPosition }) => 
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
+    phone: '',
     message: ''
   });
   const [showModal, setShowModal] = useState(false);
@@ -41,6 +42,7 @@ const JobApplication: React.FC<JobApplicationProps> = ({ selectedPosition }) => 
     } else if (isStudentPosition(selectedRole) && !isPersonalEmail(formData.email)) {
       newErrors.email = 'Student positions require personal email (gmail, yahoo, outlook, icloud, etc.). Educational emails (.edu, .k12, etc.) are not accepted.';
     }
+    if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
     if (!selectedRole) newErrors.role = 'Please select a position';
     
     setErrors(newErrors);
@@ -91,6 +93,7 @@ const JobApplication: React.FC<JobApplicationProps> = ({ selectedPosition }) => 
     const subject = `Job Application – ${selectedRole} – ${formData.fullName}`;
     const body = `Full Name: ${formData.fullName}
 Email: ${formData.email}
+Phone Number: ${formData.phone}
 Position Applied For: ${selectedRole}
 Message: ${formData.message}`;
     
@@ -241,6 +244,18 @@ Message: ${formData.message}`;
                 </div>
 
                 <div className="job-application__form-group">
+                  <label>Phone Number *</label>
+                  <input
+                    type="tel"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    className={errors.phone ? 'error' : ''}
+                    placeholder="Enter your phone number"
+                  />
+                  {errors.phone && <span className="job-application__error">{errors.phone}</span>}
+                </div>
+
+                <div className="job-application__form-group">
                   <label>Selected Position</label>
                   <input
                     type="text"
@@ -266,7 +281,7 @@ Message: ${formData.message}`;
                   variants={buttonVariants}
                   whileHover="hover"
                   whileTap="tap"
-                  disabled={!formData.fullName || !formData.email || !selectedRole}
+                  disabled={!formData.fullName || !formData.email || !formData.phone || !selectedRole}
                 >
                   Submit Application
                 </motion.button>
